@@ -38,13 +38,14 @@
 }
 
 [data-rmiz-modal-overlay] {
-  transition: background-color 0.3s;
+  transition: 0.3s;
   position: absolute;
   inset: 0;
 }
 
 [data-rmiz-modal-overlay='visible'] {
-  background-color: var(--color-fd-background);
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
 }
 
 [data-rmiz-modal-overlay='hidden'] {
@@ -65,13 +66,7 @@
   cursor: zoom-out;
   image-rendering: high-quality;
   transform-origin: 0 0;
-  transition: transform 0.3s;
+  transition: 0.3s;
   position: absolute;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  [data-rmiz-modal-overlay],
-  [data-rmiz-modal-img] {
-    transition-duration: 0.01ms !important;
-  }
+  border-radius: 10px;
 }
