@@ -1,0 +1,13 @@
+name: Flux Pyrodactyl server restarter thingity thing
+on: [ push ]
+jobs:
+  restart-server:
+    runs-on: ubuntu-latest
+    steps:
+      - name: restart
+        uses: outsparkled/pterodactyl-power-action@v0.1.0
+        with:
+          panel-url: 'https://panel.hexlane.dev'
+          server-id: '7d51a037'
+          bearer-token: ${{ secrets.BEARER_TOKEN }}
+          power-action: 'restart'
