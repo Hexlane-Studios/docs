@@ -170,31 +170,6 @@ export function DocsPage({
   );
 }
 
-export function EditOnGitHub(props: ComponentProps<'a'>) {
-  return (
-    <a
-      target="_blank"
-      rel="noreferrer noopener"
-      {...props}
-      className={cn(
-        buttonVariants({
-          color: 'secondary',
-          size: 'sm',
-          className: 'gap-1.5 not-prose',
-        }),
-        props.className,
-      )}
-    >
-      {props.children ?? (
-        <>
-          <Edit className="size-3.5" />
-          <I18nLabel label="editOnGithub" />
-        </>
-      )}
-    </a>
-  );
-}
-
 /**
  * Add typography styles
  */
