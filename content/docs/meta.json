@@ -1,0 +1,15 @@
+{
+  "title": "Changelogs",
+  "pages": [
+    "---[House]Intro---",
+    "index",
+
+    "---[NotebookTabs]Changelogs---",
+    "./changelogs/fluxv31",
+    "./changelogs/previous-versions",
+
+    "---[BookDashed]Other---",
+    "./other/faq"
+  ],
+  "defaultOpen": true
+}
