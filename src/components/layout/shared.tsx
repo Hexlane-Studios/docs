@@ -2,6 +2,8 @@ import type { ComponentProps, ReactNode } from 'react';
 import type { I18nConfig } from 'fumadocs-core/i18n';
 import type { LinkItemType } from './link-item';
 import Link from 'fumadocs-core/link';
+import Image from 'next/image';
+import Logo from '@/public/images/logo.png';
 
 export interface NavOptions {
   enabled: boolean;
@@ -87,6 +89,18 @@ export function resolveLinkItems({
   return result;
 }
 
+export const logo = (
+  <>
+    <Image
+      alt="Flux"
+      src={Logo}
+      sizes="100px"
+      className="w-22 in-[.uwu]:block"
+      aria-label="Flux"
+    />
+  </>
+);
+
 export function renderTitleNav(
   { title, url = '/' }: Partial<NavOptions>,
   props: ComponentProps<'a'>,
@@ -94,7 +108,7 @@ export function renderTitleNav(
   if (typeof title === 'function') return title({ href: url, ...props });
   return (
     <Link href={url} {...props}>
-      {title}
+      {logo}
     </Link>
   );
 }
