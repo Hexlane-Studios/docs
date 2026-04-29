@@ -8,8 +8,13 @@
     "./changelogs/fluxv31",
     "./changelogs/previous-versions",
 
+    "---[BookText]Legal---",
+    "./legal/privacypolicy",
+    "./legal/tos",
+
     "---[BookDashed]Other---",
-    "./other/faq"
+    "./other/faq",
+    "./other/contact"
   ],
   "defaultOpen": true
 }
